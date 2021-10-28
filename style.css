@@ -1,0 +1,138 @@
+:root {
+    /* Color Palletes */
+    --darkgreen:164, 31%, 17%;
+    --green:153, 100%, 25%;
+    --lightcyan:160, 32%, 87%;
+    --lightest:163, 33%, 96%;
+    --light:50, 33%, 93%;
+    --black:0, 0%, 0%;
+
+    /* font-sizes */
+    --fs-900: 9.375rem;
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.125rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* START OF NAV STYLING */
+.flex {
+    display: flex;
+}
+
+.nav {
+    width: 100%;
+    padding:3rem 2rem;
+    height: 5rem;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.nav-links {
+    display: none;
+}
+
+.logo {
+    width: 60px;
+    height: 80px;
+}
+.logo img {
+    width: 100%;
+}
+
+
+/* ----------Media Queries---------- */
+@media screen and (min-width: 938px) {
+   
+    .hamburger-menu {
+        display: none;
+    }
+    
+    .nav-links {
+        display: contents;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .nav-links, .left-nav a{
+        text-decoration: none;
+        color: var(--black);
+        padding: 10px;
+        font-weight: 900;
+    }
+
+    .left-nav a:hover {
+        color: hsl(var(--darkgreen))
+    }
+    .left-nav a:active {
+        border-bottom: 4px solid hsl(var(--darkgreen));
+    }
+
+    .right-nav a{
+        margin-right: 50px;
+    }
+    .pin-img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--black);
+        font-weight: var(--fs-800);
+    }
+
+    .logo {
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .nav-btn {
+        padding: 10px 1.2rem;
+        border-radius: 1rem;
+        margin-right: 20px;
+        background:white;    
+    }
+    .nav-btn:nth-child(2) {
+        background-color: black;
+        color: white;
+    }
+}
+
+/* ----------END OF NAV STYLING---------- */
+
+.header-extra {
+    width: 100%;
+    height: 3.12rem;
+    background-color: hsl(var(--darkgreen));
+    color: white;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    align-items: center;
+}
+
+.header-extra button {
+    padding: 10px 1.2rem;
+    border-radius: 1rem;
+    margin-right: 20px;
+    background-color: hsl(var(--darkgreen));
+    color: white; 
+    border: 2px solid white;
+}
